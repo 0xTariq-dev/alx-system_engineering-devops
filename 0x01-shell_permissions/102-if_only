@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown --olduser guillaume --newuser betty hello
+sudo chown --from=guillaume:julien betty hello
