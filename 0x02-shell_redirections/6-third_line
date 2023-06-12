@@ -1,0 +1,2 @@
+#!/bin/bash
+cat /tmp/h/iacta | head -n3 | tail -n1
