@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script prints the time for 12 hours and 59 minutesthe time for 12 hours and 59 minutes.
 
 Hour="0"
 Min="1"
