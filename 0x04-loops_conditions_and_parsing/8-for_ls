@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Bash script that displays The content of the current directory.
 
-for File in $(ls -1 | grep -v "^\.")
-do
-	echo "${File#*-}"
+for File in *; do
+	if [[ ! "$File" =~ ^\..* ]]; then
+		echo "${File#*-}"
+	fi
 done
