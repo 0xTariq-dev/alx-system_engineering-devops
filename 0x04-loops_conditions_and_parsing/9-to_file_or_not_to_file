@@ -3,17 +3,20 @@
 
 f="./school"
 
-if [ -e "$f" ]; then
+if [ -e "$f" ]
+then
 	echo "school file exists"
 
-	if [ -s "$f" ]; then
+	if [ -s "$f" ]
+	then
 		echo "school file is not empty"
 	else
 		echo "school file is empty"
 	fi
 
-	if [ -f "$f" ]; then
-		echo "school file is a regular file"
+	if [ -f "$f" ]
+	then
+		echo "school is a regular file"
 	fi
 
 else
