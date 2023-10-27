@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for File in $(ls -1 | grep -v "^\.")
+do
+	echo "${File#*-}"
+done
