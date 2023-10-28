@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script is displaying all lines containing the bash word.
+# shellcheck disable=SC2009
+ps -u "$(whoami)" -f | grep bash
