@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script is displaying all running processes for
+# all users with process hierarchy.
+ps -H aux
