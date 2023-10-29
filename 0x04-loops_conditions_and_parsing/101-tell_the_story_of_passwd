@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that tells a story about the users in /etc/passwd.
+
+while IFS=: read -r USERNAME PASSWORD USER_ID GROUP USER_INFO HOME_DIR COMM
+do
+	echo "The user $USERNAME is part of the $GROUP gang, \
+lives in $HOME_DIR and rides $COMM. $USER_ID's place \
+is protected by the passcode $PASSWORD, \
+more info about the user here: $USER_INFO"
+done < /etc/passwd
