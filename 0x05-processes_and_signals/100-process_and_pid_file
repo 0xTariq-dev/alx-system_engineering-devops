@@ -6,9 +6,9 @@
 # Deletes the file /var/run/myscript.pid and terminates itself when receiving:
 # a SIGQUIT or SIGTERM signal.
 
-function terminate {
-	rm -r /var/run/myscript.pid
-	exit 0
+terminate() {
+	rm -f /var/run/myscript.pid
+	exit
 }
 
 echo $$ > /var/run/myscript.pid
@@ -17,7 +17,7 @@ while (true)
 do
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'echo "I hate the kill command && terminate"' 15
-	trap terminate 3
-	trap 'echo "Y U no love me?!"' 2
-done
+	trap 'echo "Y U no love me?!"' SIGINT
+	trap 'echo "I hate the kill command" && terminate' SIGTERM
+	trap 'terminate' SIGQUIT
+done 
