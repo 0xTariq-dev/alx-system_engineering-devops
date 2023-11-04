@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that displays all active IPv4 connections on this machine.
+
+nc -lv localhost 98
