@@ -1,6 +1,6 @@
 # Create a file called 'School' in '/tmp' directory and write some text into it.
 
-file { 'School':
+file { '/tmp/School':
   ensure  => 'file',
   path    => '/tmp/school',
   content =>'I Love Puppet',
