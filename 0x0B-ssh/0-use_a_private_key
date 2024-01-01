@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 # This script is used to connect to a remote server using a private key.
 
-eval $(ssh-agent -s)
+eval `ssh-agent -s`
 ssh -i ~/.ssh/school ubuntu@54.172.155.33
