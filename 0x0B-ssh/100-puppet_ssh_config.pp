@@ -1,3 +1,7 @@
+#!/usr/bin/pup
+# Script to Configure ssh client to
+# reject passwd auth
+
 include stdlib
 
 file_line { 'Turn off passwd auth':
