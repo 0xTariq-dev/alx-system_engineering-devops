@@ -3,7 +3,7 @@ include stdlib
 file_line { 'Turn off password authentication':
   path  => '/etc/ssh/ssh_config',
   line  => 'PasswordAuthentication no',
-  match => '^\s*PasswordAuthentication',
+  match => '^\s*PasswordAuthentication no',
 }
 
 file_line { 'Set IdentityFile':
