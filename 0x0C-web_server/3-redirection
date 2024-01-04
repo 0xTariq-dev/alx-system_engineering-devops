@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Bash script that install NGINX on a server and configures it.
+apt-get update
+apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+mkdir -p /var/www/html
+sudo chmod -R 755 /var/www/html
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+CONFIG="server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name _;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+    if (\$request_filename ~ redirectme) {
+        rewrite ^ http://www.redirectme.org permanent;
+    }
+}"
+echo -e "$CONFIG" > /etc/nginx/sites-available/default
+if [ "$(ps aux | grep nginx | wc -l)" -gt 1 ]; then
+    service nginx restart
+else
+    service nginx start
+fi
