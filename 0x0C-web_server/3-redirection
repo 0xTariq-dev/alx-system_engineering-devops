@@ -22,7 +22,7 @@ CONFIG="server {
         rewrite ^ https://www.waza.org/404 permanent;
     }
 }"
-echo -e "$CONFIG" > /etc/nginx/sites-available/default
+bach -c "echo -e "$CONFIG" > /etc/nginx/sites-available/default"
 if [ "$(ps aux | grep nginx | wc -l)" -gt 1 ]; then
     service nginx restart
 else
