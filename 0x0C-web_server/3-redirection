@@ -5,7 +5,7 @@ apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 mkdir -p /var/www/html
 sudo chmod -R 755 /var/www/html
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+echo 'Hello World!' > /var/www/html/index.html
 CONFIG="server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -22,8 +22,8 @@ CONFIG="server {
         rewrite ^ https://www.waza.org/404 permanent;
     }
 }"
-bach -c "echo -e "$CONFIG" > /etc/nginx/sites-available/default"
-if [ "$(ps aux | grep nginx | wc -l)" -gt 1 ]; then
+bach -c "echo -e '$CONFIG' > /etc/nginx/sites-available/default"
+if [ "$(pgrep -c nginx)" -gt 0 ]; then
     service nginx restart
 else
     service nginx start
