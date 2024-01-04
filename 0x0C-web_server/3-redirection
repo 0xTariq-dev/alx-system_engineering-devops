@@ -19,7 +19,7 @@ CONFIG="server {
         try_files \$uri \$uri/ =404;
     }
     if (\$request_filename ~ redirectme) {
-        rewrite ^ http://www.redirectme.org permanent;
+        rewrite ^ https://www.waza.org/404 permanent;
     }
 }"
 echo -e "$CONFIG" > /etc/nginx/sites-available/default
