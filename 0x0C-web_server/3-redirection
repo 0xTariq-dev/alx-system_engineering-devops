@@ -19,7 +19,7 @@ CONFIG="server {
         rewrite ^ https://www.waza.org/404 permanent;
     }
 }"
-bash -c "echo -e '$CONFIG' > /etc/nginx/sites-available/default"
+bash -c "echo -e '$CONFIG' > /etc/nginx/sites-enabled/default"
 if [ "$(pgrep -c nginx)" -gt 0 ]; then
     sudo service nginx restart
 else
