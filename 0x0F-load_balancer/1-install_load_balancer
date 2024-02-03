@@ -17,8 +17,8 @@ frontend LB
         default_backend webservers
 backend webservers
         balance roundrobin
-        server 432827-web-01 100.26.173.229:80 check
-        server 432827-web-02 35.153.66.163:80 check
+        server web-01 100.26.173.229:80 check
+        server web-02 35.153.66.163:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 service haproxy start
