@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script is used to install haproxy for a load balancer and configure it with algorithm and backends.
+apt-get install -y --no-install-recommends software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.8
+apt-get update
+apt-get install -y haproxy=2.8.\*
+
+cp -a /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
+
+echo "ENABLED=1" > /etc/default/haproxy
+echo "
+frontend LB
+        bind *:80
+        mode http
+        option forwardfor
+        option httpclose
+        default_backend webservers
+backend webservers
+        balance roundrobin
+        server 432827-web-01 100.26.173.229:80 check
+        server 432827-web-02 35.153.66.163:80 check
+" >> /etc/haproxy/haproxy.cfg
+
+service haproxy start
