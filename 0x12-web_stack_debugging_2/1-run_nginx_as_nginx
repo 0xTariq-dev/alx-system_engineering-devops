@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script is used to run the command whoami as another user.
+
+# Change the user that nginx runs as to nginx.
+sed -i 's/#user  www-data;/user  nginx;/' /etc/nginx/nginx.conf
+
+# Change the port that nginx listens on to 8080.
+sed -i 's/80/8080/' /etc/nginx/sites-available/default
+
+# Change the permissions of the nginx.conf file.
+chmod 644 /etc/nginx/nginx.conf
+
+# kill the apache2 process and start the nginx process.
+pkill apache2
+sudo -u nginx service nginx start
