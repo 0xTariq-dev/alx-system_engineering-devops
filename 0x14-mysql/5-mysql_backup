@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is used to backup all mysql databases from the server.
+
+# Create a backup of all databases.
+mysqldump --all-databases -u root --password="$1" > backup.sql 2>/dev/null
+
+# Output the backup file name.
+echo "backup.sql"
+
+# Get the current date.
+current_date=$(date +%d-%m-%Y)
+
+# Compress the backup file into a tar.gz file.
+tar -czf "$current_date.tar.gz" backup.sql

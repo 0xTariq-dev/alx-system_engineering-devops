@@ -24,4 +24,13 @@ Task 3: Quite an experience to live in fear, isn't it?
 Task 4: Setup a Primary-Replica infrastructure using MySQL
 - Set up a Primary-Replica infrastructure using MySQL.
 - The primary server is web-01 and the replica server is web-02.
-- Set up the replica server so that it is synced with the primary server in a one-way replication.
+- Set up the replica server so that it is synced with the primary server.
+
+Task 5: MySQL backup
+- Write a Bash script that generates a MySQL dump and creates a compressed archive out of it.
+- The script should have the following requirements:
+  - The MySQL dump must contain all the databases on the server.
+  - The MySQL dump must be named `backup.sql`.
+  - The MySQL dump file should be compressed to a `tar.gz` archive.
+  - The script should have the following usage: `./5-mysql_backup.sh [mysql_root_password]`.
+  - The script should return an error code if the `mysql_root_password` is not provided or incorrect.
