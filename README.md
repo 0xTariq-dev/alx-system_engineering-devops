@@ -1,6 +1,6 @@
 # ALX System Engineering DevOps Repository
 
-![DevOps Lifecycle](https://www.atatus.com/blog/devops-best-practices/)
+![DevOps Lifecycle](https://www.vlrtraining.in/wp-content/uploads/2020/10/logo-devops-768x876.png)
 ----------------------------
 ## Project Description
 
