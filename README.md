@@ -4,7 +4,7 @@
 ----------------------------
 ## Project Description
 
-This repository contains a series of projects that I completed as part of the ALX System Engineering DevOps track. The projects cover various topics and skills related to system administration, DevOps, and web development.
+> This repository contains a series of projects that I completed as part of the ALX System Engineering DevOps track. The projects cover various topics and skills related to system administration, DevOps, and web development.
 ----------------------------
 ## Project Purpose
 
