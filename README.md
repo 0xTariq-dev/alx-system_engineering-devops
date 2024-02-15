@@ -4,7 +4,7 @@
 ----------------------------
 ## Project Description
 
-> This repository contains a series of projects that I completed as part of the ALX System Engineering DevOps track. The projects cover various topics and skills related to system administration, DevOps, and web development.
+> This repository contains a series of projects that I completed as part of the ALX System Engineering track. The projects cover various topics and skills related to system administration, DevOps, and web development.
 ----------------------------
 ## Project Purpose
 
@@ -40,7 +40,9 @@ To install and run these projects, you will need the following:
 - A web browser such as Chrome or Firefox
 
 -Clone this repository to your local machine:
-```git clone https://github.com/0xTariq-dev/alx-system_engineering-devops.git```
+```
+git clone https://github.com/0xTariq-dev/alx-system_engineering-devops.git
+```
 
 Change to the project directory and execute the scripts:
 ```cd alx-system_engineering-devops/<projct name>
