@@ -39,33 +39,44 @@ To install and run these projects, you will need the following:
 - A text editor such as Emacs, Vim or nano
 - A web browser such as Chrome or Firefox
 
--Clone this repository to your local machine:
+- Clone this repository to your local machine:
+
 ```
 git clone https://github.com/0xTariq-dev/alx-system_engineering-devops.git
 ```
 
 Change to the project directory and execute the scripts:
-```cd alx-system_engineering-devops/<projct name>
-./<script name>```
+
+```
+cd alx-system_engineering-devops/<projct name>
+./<script name>
+```
 
 ----------------------------
 ## Project Usage
 
 Each project directory contains a README file that explains the objectives, requirements, and tasks of the project. Each task is a script that performs a specific action or function.
+
 - To run a script, you need to make it executable and then execute it with the ./ prefix. For example:
+
 ```
 chmod u+x 0-hello_world
 ./0-hello_world
 ```
+
 - Some scripts may require arguments or options. You can pass them after the script name. For example:
+
 ```
 ./1-confused_smiley "Hello World"
 ```
+
 -Some scripts may also produce output or return values. You can redirect them to a file or another command using the > or | operators. For example:
+
 ```
 ./2-hellofile > hello.txt
 ./3-twofiles | wc -l
 ```
+
 ----------------------------
 ## Project Contribution
 
