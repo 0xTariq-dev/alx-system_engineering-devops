@@ -1,6 +1,6 @@
 # ALX System Engineering DevOps Repository
 
-![DevOps Lifecycle](https://www.vlrtraining.in/wp-content/uploads/2020/10/logo-devops-768x876.png)
+![DevOps Lifecycle](https://www.vlrtraining.in/wp-content/uploads/2020/10/logo-devops-300x343.png)
 ----------------------------
 ## Project Description
 
