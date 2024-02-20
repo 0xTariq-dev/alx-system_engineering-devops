@@ -38,4 +38,5 @@ The project directory is organized as follows:
         This file contains a Python script that, using a REST API, for a given employee ID, returns information about his/her TODO list progress.
     - 1-export_to_CSV.py:
         This file contains a Python script that, using a REST API, for a given employee ID, returns information about his/her TODO list progress and exports it to a CSV file.
-    
+    - 2-export_to_JSON.py:
+        This file contains a Python script that, using a REST API, for a given employee ID, returns information about his/her TODO list progress and exports it to a JSON file.
