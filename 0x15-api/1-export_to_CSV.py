@@ -10,7 +10,7 @@ def gather_data_from_an_API():
     user_id = argv[1]
     url = f'https://jsonplaceholder.typicode.com/users/{user_id}'
     response = requests.get(url)
-    user = f'"{user_id}","{response.json().get("name")}"'
+    user = f'"{user_id}","{response.json().get("username")}"'
     url = f'https://jsonplaceholder.typicode.com/todos?userId={user_id}'
     response = requests.get(url)
     todos = response.json()
