@@ -20,5 +20,6 @@ def gather_data_from_an_API():
             task = f',"{task.get("completed")}","{task.get("title")}"\n'
             file.write(user + task)
 
+
 if __name__ == "__main__":
     gather_data_from_an_API()
