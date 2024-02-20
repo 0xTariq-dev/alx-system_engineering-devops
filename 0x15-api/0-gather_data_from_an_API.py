@@ -16,7 +16,7 @@ def gather_data_from_an_API():
     todos = response.json()
     tasks = [task for task in todos if task.get('completed') is True]
     prog = [len(tasks), len(todos)]
-    print(f"Employee {user} is done with tasks({prog[1]}/{prog[2]}):")
+    print(f"Employee {user} is done with tasks({prog[0]}/{prog[1]}):")
     [print("\t " + task.get('title')) for task in tasks]
 
 
