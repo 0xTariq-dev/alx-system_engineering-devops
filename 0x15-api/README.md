@@ -36,4 +36,6 @@ The project directory is organized as follows:
 - The main project directory contains the following files.
     - 0-gather_data_from_an_API.py:
         This file contains a Python script that, using a REST API, for a given employee ID, returns information about his/her TODO list progress.
+    - 1-export_to_CSV.py:
+        This file contains a Python script that, using a REST API, for a given employee ID, returns information about his/her TODO list progress and exports it to a CSV file.
     
