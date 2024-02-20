@@ -21,6 +21,8 @@ def gather_data_from_an_API():
     user_tasks = {argv[1]: tasks}
     json_string = json.dumps(user_tasks, ensure_ascii=False)
     print(json_string)
+    with open(f'{argv[1]}.json', 'w') as f:
+        f.write(json_string)
 
 
 if __name__ == "__main__":
