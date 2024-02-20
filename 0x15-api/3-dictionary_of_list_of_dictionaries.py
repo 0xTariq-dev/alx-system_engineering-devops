@@ -20,7 +20,7 @@ def gather_data_from_an_API():
             f'https://jsonplaceholder.typicode.com/users/{id}/todos'
             )
         todos = res.json()
-        # Store the todos in a dictionary with the user id as the key
+        # Store the todos in a dictionary with the user id as the key.
         tasks = [{"username": name,
                   "task": task.get("title"),
                   "completed": task.get("completed")
