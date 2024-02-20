@@ -42,3 +42,5 @@ The project directory is organized as follows:
         This file contains a Python script that, using a REST API, for a given employee ID, returns information about his/her TODO list progress and exports it to a JSON file.
     - 3-dictionary_of_list_of_dictionaries.py:
         This file contains a Python script that, using a REST API, returns information about all employees TODO list progress and exports it to a JSON file.
+    - README.md:
+        This file contains the project description, purpose, features, and directory.

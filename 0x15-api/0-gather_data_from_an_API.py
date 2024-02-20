@@ -7,16 +7,20 @@ from sys import argv
 
 def gather_data_from_an_API():
     """Gather data from an API"""
-    user_id = argv[1]
-    url = f'https://jsonplaceholder.typicode.com/users/{user_id}'
+    # Get the user name
+    url = f'https://jsonplaceholder.typicode.com/users/{argv[1]}'
     response = requests.get(url)
     user = response.json().get('name')
-    url = f'https://jsonplaceholder.typicode.com/todos?userId={user_id}'
+    # Get the todos for the user
+    url = f'https://jsonplaceholder.typicode.com/todos?userId={argv[1]}'
     response = requests.get(url)
     todos = response.json()
+    # Get the list of completed tasks
     tasks = [task for task in todos if task.get('completed') is True]
-    prog = [len(tasks), len(todos)]
-    print(f"Employee {user} is done with tasks({prog[0]}/{prog[1]}):")
+    # Calculate the progress
+    done, all = [len(tasks), len(todos)]
+    # Print the progress and the tasks
+    print(f"Employee {user} is done with tasks({done}/{all}):")
     [print("\t " + task.get('title')) for task in tasks]
 
 

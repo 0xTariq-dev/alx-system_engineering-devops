@@ -7,15 +7,17 @@ from sys import argv
 
 def gather_data_from_an_API():
     """Gather data from an API"""
-    user_id = argv[1]
-    url = f'https://jsonplaceholder.typicode.com/users/{user_id}'
+    # Get the user name
+    url = f'https://jsonplaceholder.typicode.com/users/{argv[1]}'
     response = requests.get(url)
-    user = f'"{user_id}","{response.json().get("username")}"'
-    url = f'https://jsonplaceholder.typicode.com/todos?userId={user_id}'
+    user = f'"{argv[1]}","{response.json().get("username")}"'
+    # Get the todos for the user
+    url = f'https://jsonplaceholder.typicode.com/todos?userId={argv[1]}'
     response = requests.get(url)
     todos = response.json()
+    # Get the list of tasks and save them to a `.csv` file
     tasks = [task for task in todos]
-    with open(f'{user_id}.csv', 'w') as file:
+    with open(f'{argv[1]}.csv', 'w') as file:
         for task in todos:
             task = f',"{task.get("completed")}","{task.get("title")}"\n'
             file.write(user + task)
