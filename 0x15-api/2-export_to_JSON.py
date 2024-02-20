@@ -13,12 +13,10 @@ def gather_data_from_an_API():
         f'https://jsonplaceholder.typicode.com/users/{argv[1]}/todos'
         )
     todos = res.json()
-    tasks = [
-        {"task": task.get("title"),
-         "completed": task.get("completed"),
-         "username": user
-        } for task in todos
-    ]
+    tasks = [{"task": task.get("title"),
+              "completed": task.get("completed"),
+              "username": user
+              } for task in todos]
 
     user_tasks = {argv[1]: tasks}
     json_string = json.dumps(user_tasks, ensure_ascii=False)
